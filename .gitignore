@@ -2,9 +2,9 @@
 
 # dependencies
 /node_modules
+src/firebase
 /.pnp
 .pnp.js
-src/firebase
 
 
 # testing

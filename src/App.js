@@ -9,6 +9,8 @@ import Home from './Pages/Home';
 import Login from './Pages/Login'
 import Signup from './Pages/Signup'
 import Create from './Pages/Create'
+import View from './Pages/ViewPost'
+import Post from './store/PostContext';
 
 
 function App() {
@@ -21,12 +23,15 @@ function App() {
   })
   return (
     <div>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/create" element={<Create />} />
-      </Routes>
+      <Post>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/view" element={<View />} />
+        </Routes>
+      </Post>
     </div>
   );
 }
